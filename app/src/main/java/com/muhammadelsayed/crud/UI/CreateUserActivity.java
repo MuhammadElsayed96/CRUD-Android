@@ -21,7 +21,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class CreateUserActivity extends AppCompatActivity {
 
     private static final String LOG_TAG = CreateUserActivity.class.getName();
-    private static final String SERVER_URL = "http://18.194.70.123";
+    private static final String SERVER_URL = "http://52.224.66.22/abdullah/crud/";
 
     EditText name;
     EditText email;

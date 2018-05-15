@@ -37,7 +37,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class MainActivity extends AppCompatActivity {
 
     private static final String LOG_TAG = MainActivity.class.getName();
-    private static final String SERVER_URL = "http://52.224.66.22/abdullah/crud";
+    private static final String SERVER_URL = "http://52.224.66.22/abdullah/crud/";
     private UsersAdapter adapter;
     private SwipeRefreshLayout mSwipeRefreshLayout;
     private TextView noInternetConnectionTextView;
@@ -195,8 +195,10 @@ public class MainActivity extends AppCompatActivity {
                 List<User> usersList = response.body();
                 adapter.clear();
                 mSwipeRefreshLayout.setRefreshing(false);
-                adapter.addAll(usersList);
-
+                if (usersList != null)
+                    adapter.addAll(usersList);
+                else
+                    Toast.makeText(getApplicationContext(), "Error occurred", Toast.LENGTH_LONG).show();
             }
 
             @Override

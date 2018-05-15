@@ -17,17 +17,17 @@ import retrofit2.http.Path;
  */
 
 public interface UserClient {
-    @GET("/api/users")
+    @GET("api/users")
     Call<List<User>> getDataOfUser();
 
-    @POST("/api/users")
+    @POST("api/users")
     Call<Void> createAccount(@Body User user);
 
-    @DELETE("/api/users/{id}")
+    @DELETE("api/users/{id}")
     Call<Void> deleteUser(@Path("id") int itemId);
 
 
-    @PATCH("/api/users/{id}")
+    @PATCH("api/users/{id}")
     Call<Void> updateUser(
             @Path("id") String id,
             @Body User user);

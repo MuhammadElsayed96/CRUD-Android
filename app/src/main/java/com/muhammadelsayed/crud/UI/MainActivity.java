@@ -37,7 +37,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class MainActivity extends AppCompatActivity {
 
     private static final String LOG_TAG = MainActivity.class.getName();
-    private static final String SERVER_URL = "http://18.194.70.123";
+    private static final String SERVER_URL = "http://52.224.66.22/abdullah/crud";
     private UsersAdapter adapter;
     private SwipeRefreshLayout mSwipeRefreshLayout;
     private TextView noInternetConnectionTextView;

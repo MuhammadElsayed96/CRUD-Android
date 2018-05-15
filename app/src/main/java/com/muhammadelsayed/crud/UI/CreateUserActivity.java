@@ -79,7 +79,7 @@ public class CreateUserActivity extends AppCompatActivity {
             @Override
             public void onResponse(Call<Void> call, Response<Void> response) {
                 Log.i(LOG_TAG, "New user account created successfully on the server.");
-                Toast.makeText(CreateUserActivity.this, "Done, Yeah! :)", Toast.LENGTH_SHORT).show();
+                Toast.makeText(CreateUserActivity.this, "User add successfully", Toast.LENGTH_SHORT).show();
                 finish();
             }
 
